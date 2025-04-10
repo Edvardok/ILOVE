@@ -1,0 +1,102 @@
+body {
+  background-color: #ffe4e1;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 24px;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+video {
+  display: none;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
+
+.falling-emoji {
+  position: absolute;
+  font-size: 30px;
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeInOut 4s forwards ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Появляющиеся фразы */
+.falling-phrase {
+  position: absolute;
+  font-size: 20px;
+  color: #ff69b4;
+  opacity: 0;
+  animation: fadeInOut 4s forwards ease-in-out;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Ограничиваем область появления фраз */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
